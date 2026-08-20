@@ -5,7 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stopify - Privacy Policy & Terms and Conditions</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --bg-deep: #060608;
+            --card-bg: #111116;
+            --card-hover: #15151b;
+            --border-color: #22222a;
+            --text-main: #a1a1aa;
+            --text-light: #e4e4e7;
+            --accent: #818cf8;
+            --accent-bg: rgba(129, 140, 248, 0.1);
+            --success: #10b981;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -13,127 +28,153 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: #fff;
+            font-family: 'Inter', -apple-system, sans-serif;
+            background-color: var(--bg-deep);
+            color: var(--text-main);
             min-height: 100vh;
-            padding: 20px;
+            padding: 40px 20px;
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
         }
 
         .container {
-            max-width: 900px;
+            max-width: 850px;
             margin: 0 auto;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
         }
 
         header {
-            background: black;
-            color: white;
-            padding: 40px 30px;
             text-align: center;
+            margin-bottom: 50px;
+            padding: 20px 0;
         }
 
         header h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-            font-weight: 700;
+            color: #ffffff;
+            font-size: 3rem;
+            font-weight: 800;
+            letter-spacing: -1px;
+            margin-bottom: 15px;
         }
 
         header p {
-            font-size: 1.1em;
-            opacity: 0.95;
-        }
-
-        .last-updated {
-            background: #f8f9fa;
-            padding: 15px 30px;
-            border-bottom: 1px solid #e0e0e0;
+            font-size: 1.15rem;
+            color: var(--text-light);
+            margin-bottom: 25px;
             font-weight: 500;
-            color: #666;
         }
 
-        .content {
-            padding: 40px 30px;
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            background: var(--accent-bg);
+            color: var(--accent);
+            border: 1px solid rgba(129, 140, 248, 0.2);
+            padding: 6px 16px;
+            border-radius: 9999px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .badge-popular {
+            background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+            color: white;
+            border: none;
+            box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
         }
 
         section {
-            margin-bottom: 35px;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 35px;
+            margin-bottom: 24px;
+            transition: all 0.3s ease;
+        }
+
+        section:hover {
+            background: var(--card-hover);
+            border-color: #33333f;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
         }
 
         h2 {
-            color: #667eea;
-            font-size: 1.6em;
-            margin-bottom: 15px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #667eea;
+            color: #ffffff;
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
         }
 
-        h3 {
-            color: #764ba2;
-            font-size: 1.1em;
-            margin: 15px 0 10px 0;
-            margin-left: 20px;
+        .section-number {
+            color: var(--accent);
+            margin-right: 12px;
+            font-size: 1.1rem;
+            opacity: 0.8;
         }
 
-        p {
+        .subsection {
+            margin-top: 25px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.03);
+        }
+
+        .subsection-header {
             margin-bottom: 12px;
-            text-align: justify;
         }
 
-        ul {
-            margin: 15px 0 15px 40px;
+        .scannable-list {
+            list-style: none;
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
         }
 
-        li {
-            margin-bottom: 10px;
-            text-align: justify;
+        .scannable-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        .checkmark-icon {
+            flex-shrink: 0;
+            margin-top: 4px;
+        }
+
+        strong {
+            color: var(--text-light);
+            font-weight: 600;
         }
 
         a {
-            color: #667eea;
+            color: var(--accent);
             text-decoration: none;
+            transition: color 0.2s;
         }
 
         a:hover {
+            color: #a5b4fc;
             text-decoration: underline;
         }
 
         footer {
-            background: #f8f9fa;
-            padding: 30px;
             text-align: center;
-            color: #666;
-            border-top: 1px solid #e0e0e0;
-        }
-
-        .subsection {
-            margin-left: 20px;
-            margin-bottom: 15px;
-        }
-
-        .subsection p {
-            margin-bottom: 8px;
-        }
-
-        strong {
-            color: #333;
+            padding: 40px 0 20px 0;
+            color: #52525b;
+            font-size: 0.95rem;
         }
 
         @media (max-width: 768px) {
             header h1 {
-                font-size: 1.8em;
+                font-size: 2.2rem;
             }
-
-            .content {
-                padding: 20px 15px;
-            }
-
-            h2 {
-                font-size: 1.3em;
+            section {
+                padding: 25px 20px;
             }
         }
     </style>
@@ -144,195 +185,146 @@
         <header>
             <h1>Stopify</h1>
             <p>Privacy Policy & Terms and Conditions</p>
+            <div class="badge badge-popular">Last Updated: June 2, 2026</div>
         </header>
 
-        <div class="last-updated">
-            <strong>Last Updated:</strong> June 2, 2026
-        </div>
+        <!-- Section 1 -->
+        <section>
+            <h2><span class="section-number">01</span> INTRODUCTION</h2>
+            <p>
+                These Terms and Conditions and Privacy Policy ("Agreement") govern your use of this screen time
+                reduction application (the "Stopify"). By downloading, installing, or using the Application, you
+                agree to be bound by this Agreement. If you do not agree to these terms, do not use the Application.
+            </p>
+        </section>
 
-        <div class="content">
-            <!-- Section 1 -->
-            <section>
-                <h2>1. INTRODUCTION</h2>
-                <p>
-                    These Terms and Conditions and Privacy Policy ("Agreement") govern your use of this screen time
-                    reduction application (the "Stopify"). By downloading, installing, or using the Application, you
-                    agree to be bound by this Agreement. If you do not agree to these terms, do not use the Application.
-                </p>
-            </section>
+        <!-- Section 2 -->
+        <section>
+            <h2><span class="section-number">02</span> DATA COLLECTION AND LOCAL PROCESSING</h2>
+            <p>The Application is designed with a privacy-first architecture.</p>
+            
+            <ul class="scannable-list">
+                <li>
+                    <svg class="checkmark-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--success)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <div>
+                        <strong>Personal Information:</strong> The Application requests your display name solely for the purpose of personalized in-app greetings. We do not collect, request, or store your email address, phone number, physical address, or any other personally identifiable information (PII).
+                    </div>
+                </li>
+                <li>
+                    <svg class="checkmark-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--success)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <div>
+                        <strong>Local Storage:</strong> All data generated by the Application, including your daily activity, usage statistics, and dashboard metrics, are stored strictly locally on your device. The Application does not transmit, upload, or share this data with our servers or any third-party servers.
+                    </div>
+                </li>
+            </ul>
+        </section>
 
-            <!-- Section 2 -->
-            <section>
-                <h2>2. DATA COLLECTION AND LOCAL PROCESSING</h2>
-                <p>The Application is designed with a privacy-first architecture.</p>
+        <!-- Section 3 -->
+        <section>
+            <h2><span class="section-number">03</span> REQUIRED PERMISSIONS AND API USAGE</h2>
+            <p>To function as intended, the Application requires specific device permissions. We strictly adhere to Google Play Developer Policies regarding the use of these permissions:</p>
 
-                <div class="subsection">
-                    <h3>a. Personal Information</h3>
-                    <p>
-                        The Application requests your display name solely for the purpose of personalized in-app
-                        greetings. We do not collect, request, or store your email address, phone number, physical
-                        address, or any other personally identifiable information (PII).
-                    </p>
+            <div class="subsection">
+                <div class="subsection-header">
+                    <span class="badge">UsageStats API</span>
                 </div>
+                <p>The Application requires the "Usage Access" permission to retrieve data regarding the time you spend on various applications. This data is used exclusively on your device to calculate your screen time and populate your activity dashboard. It is never transmitted off your device.</p>
+            </div>
 
-                <div class="subsection">
-                    <h3>b. Local Storage</h3>
-                    <p>
-                        All data generated by the Application, including your daily activity, usage statistics, and
-                        dashboard metrics, are stored strictly locally on your device. The Application does not
-                        transmit, upload, or share this data with our servers or any third-party servers.
-                    </p>
+            <div class="subsection">
+                <div class="subsection-header">
+                    <span class="badge">Unrestricted Battery Usage</span>
                 </div>
-            </section>
+                <p>To accurately monitor screen time continuously in the background, the Application requires exemption from battery optimization.</p>
+            </div>
 
-            <!-- Section 3 -->
-            <section>
-                <h2>3. REQUIRED PERMISSIONS AND API USAGE</h2>
-                <p>
-                    To function as intended, the Application requires specific device permissions. We strictly adhere to
-                    Google Play Developer Policies regarding the use of these permissions:
-                </p>
-
-                <div class="subsection">
-                    <h3>a. UsageStats API</h3>
-                    <p>
-                        The Application requires the "Usage Access" permission to retrieve data regarding the time you
-                        spend on various applications. This data is used exclusively on your device to calculate your
-                        screen time and populate your activity dashboard. It is never transmitted off your device.
-                    </p>
-
+            <div class="subsection">
+                <div class="subsection-header">
+                    <span class="badge">Notifications</span>
                 </div>
+                <p>The Application requires notification permissions to alert you when you are approaching or have reached your screen time limits.</p>
+            </div>
 
-                <div class="subsection">
-                    <h3>b. Unrestricted Battery Usage</h3>
-                    <p>
-                        To accurately monitor screen time continuously in the background, the Application requires
-                        exemption from battery optimization.
-                    </p>
+            <div class="subsection">
+                <div class="subsection-header">
+                    <span class="badge">Display Over Other Apps</span>
                 </div>
+                <p>The Application requires the "System Alert Window" permission to display a blocking interface or warning overlay on top of other applications. This is a mechanical necessity to enforce your self-imposed screen time limits. This permission is not used to monitor or collect data from other apps.</p>
+            </div>
 
-                <div class="subsection">
-                    <h3>c. Notifications</h3>
-                    <p>
-                        The Application requires notification permissions to alert you when you are approaching or have
-                        reached your screen time limits.
-                    </p>
+            <div class="subsection">
+                <div class="subsection-header">
+                    <span class="badge">Accessibility Services</span>
                 </div>
+                <p>Stopify uses Android Accessibility Service only when the user enables the optional Short-Form Content Blocking feature. The service is used exclusively to identify short-form content interfaces (such as Reels, Shorts, and similar feeds) inside supported applications so that the app can block distracting content according to the user's settings. Accessibility data is processed entirely on the user's device. Stopify does not collect, store, transmit, or share accessibility events or personal information obtained through Accessibility Services.</p>
+            </div>
 
-                <div class="subsection">
-                    <h3>d. Display Over Other Apps (Overlay)</h3>
-                    <p>
-                        The Application requires the "System Alert Window" permission to display a blocking interface or
-                        warning overlay on top of other applications. This is a mechanical necessity to enforce your
-                        self-imposed screen time limits. This permission is not used to monitor or collect data from
-                        other apps.
-                    </p>
+            <div class="subsection">
+                <div class="subsection-header">
+                    <span class="badge">Notification Listener</span>
                 </div>
-                <div class="subsection">
-                    <h3>e. Accessibility Services</h3>
-                    <p>
-                        Stopify uses Android Accessibility Service only when the user enables the optional Short-Form
-                        Content Blocking feature.
+                <p>The Application requires Notification Listener Permission only for its notification-blocking feature. When a user selects specific apps, Stopify can block or hide their notifications to help reduce distractions. The Application does not read, store, share, or transmit the content of notifications or any personal data. Stopify is designed to function fully offline, and this feature does not require an internet connection.</p>
+            </div>
+        </section>
 
-                        The service is used exclusively to identify short-form content interfaces (such as Reels,
-                        Shorts, and similar feeds) inside supported applications so that the app can block distracting
-                        content according to the user's settings.
+        <!-- Section 4 -->
+        <section>
+            <h2><span class="section-number">04</span> THIRD-PARTY SERVICES AND ADVERTISEMENTS</h2>
+            <p>While the Application's core functionality operates entirely offline, the Application incorporates third-party advertising networks to support development.</p>
+            
+            <ul class="scannable-list">
+                <li>
+                    <svg class="checkmark-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--success)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <div>
+                        <strong>Internet Connection:</strong> The Application requires an active internet connection solely for the purpose of fetching and displaying advertisements.
+                    </div>
+                </li>
+                <li>
+                    <svg class="checkmark-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--success)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <div>
+                        <strong>Ad Network Data Collection:</strong> These third-party ad networks may collect and use non-personal data, such as your device's Advertising ID and IP address, to serve relevant ads. This data collection is governed by the respective privacy policies of the ad networks utilized within the Application.
+                    </div>
+                </li>
+            </ul>
+        </section>
 
-                        Accessibility data is processed entirely on the user's device. Stopify does not collect, store,
-                        transmit, or share accessibility events or personal information obtained through Accessibility
-                        Services.
-                </div>
-                <div class="subsection">
-                    <h3>f. Notification Listener Permission (NotificationListenerService)</h3>
-                    <p>
-                        The Application requires Notification Listener Permission only for its notification-blocking feature. When a user selects specific apps, Stopify can block or hide their notifications to help reduce distractions. The Application does not read, store, share, or transmit the content of notifications or any personal data. Stopify is designed to function fully offline, and this feature does not require an internet connection.
-                    </p>
-                </div>
-            </section>
+        <!-- Section 5 -->
+        <section>
+            <h2><span class="section-number">05</span> USER RESPONSIBILITIES</h2>
+            <p>You are responsible for configuring the Application's settings, including screen time limits and app restrictions, according to your personal preferences. The developer assumes no responsibility for any missed alarms, messages, or notifications resulting from the Application's overlay blocking access to other applications.</p>
+        </section>
 
-            <!-- Section 4 -->
-            <section>
-                <h2>4. THIRD-PARTY SERVICES AND ADVERTISEMENTS</h2>
-                <p>
-                    While the Application's core functionality operates entirely offline, the Application incorporates
-                    third-party advertising networks to support development.
-                </p>
+        <!-- Section 6 -->
+        <section>
+            <h2><span class="section-number">06</span> CONTACT INFORMATION</h2>
+            <p>If you have any questions, concerns, or grievances regarding this Privacy Policy or the data practices of this application, please contact the Grievance Officer at:</p>
+            <p style="margin-top: 15px;">
+                <span class="badge">Email</span> 
+                <a href="mailto:jainronak663@gmail.com" style="margin-left: 10px; font-weight: 500;">jainronak663@gmail.com</a>
+            </p>
+        </section>
 
-                <div class="subsection">
-                    <h3>a. Internet Connection</h3>
-                    <p>
-                        The Application requires an active internet connection solely for the purpose of fetching and
-                        displaying advertisements.
-                    </p>
-                </div>
+        <!-- Section 7 -->
+        <section>
+            <h2><span class="section-number">07</span> DISCLAIMER OF WARRANTIES</h2>
+            <p>The Application is provided on an "AS IS" and "AS AVAILABLE" basis. The developer makes no representations or warranties of any kind, express or implied, regarding the Application's operation, accuracy, or uninterrupted availability. To the fullest extent permitted by law, the developer disclaims all warranties, express or implied.</p>
+        </section>
 
-                <div class="subsection">
-                    <h3>b. Ad Network Data Collection</h3>
-                    <p>
-                        These third-party ad networks may collect and use non-personal data, such as your device's
-                        Advertising ID and IP address, to serve relevant ads. This data collection is governed by the
-                        respective privacy policies of the ad networks utilized within the Application.
-                    </p>
-                </div>
-            </section>
+        <!-- Section 8 -->
+        <section>
+            <h2><span class="section-number">08</span> LIMITATION OF LIABILITY</h2>
+            <p>In no event shall the developer be liable for any indirect, incidental, special, or consequential damages arising out of or in connection with your use of the Application, including but not limited to loss of data, loss of productivity, or device malfunctions.</p>
+        </section>
 
-            <!-- Section 5 -->
-            <section>
-                <h2>5. USER RESPONSIBILITIES</h2>
-                <p>
-                    You are responsible for configuring the Application's settings, including screen time limits and app
-                    restrictions, according to your personal preferences. The developer assumes no responsibility for
-                    any missed alarms, messages, or notifications resulting from the Application's overlay blocking
-                    access to other applications.
-                </p>
-            </section>
-
-            <!-- Section 6 -->
-            <section>
-                <h2>6. CONTACT INFORMATION</h2>
-                <p>
-                    If you have any questions, concerns, or grievances regarding this Privacy Policy or the data
-                    practices of this application, please contact the Grievance Officer at:
-                </p>
-                <p><strong>Email:</strong> <a href="mailto:jainronak663@gmail.com">jainronak663@gmail.com</a></p>
-            </section>
-
-            <!-- Section 7 -->
-            <section>
-                <h2>7. DISCLAIMER OF WARRANTIES</h2>
-                <p>
-                    The Application is provided on an "AS IS" and "AS AVAILABLE" basis. The developer makes no
-                    representations or warranties of any kind, express or implied, regarding the Application's
-                    operation, accuracy, or uninterrupted availability. To the fullest extent permitted by law, the
-                    developer disclaims all warranties, express or implied.
-                </p>
-            </section>
-
-            <!-- Section 8 -->
-            <section>
-                <h2>8. LIMITATION OF LIABILITY</h2>
-                <p>
-                    In no event shall the developer be liable for any indirect, incidental, special, or consequential
-                    damages arising out of or in connection with your use of the Application, including but not limited
-                    to loss of data, loss of productivity, or device malfunctions.
-                </p>
-            </section>
-
-            <!-- Section 9 -->
-            <section>
-                <h2>9. CHANGES TO THIS AGREEMENT</h2>
-                <p>
-                    We reserve the right to modify this Agreement at any time. Any changes will be reflected within the
-                    Application. Continued use of the Application following any modifications constitutes your
-                    acceptance of the revised Agreement.
-                </p>
-            </section>
-        </div>
+        <!-- Section 9 -->
+        <section>
+            <h2><span class="section-number">09</span> CHANGES TO THIS AGREEMENT</h2>
+            <p>We reserve the right to modify this Agreement at any time. Any changes will be reflected within the Application. Continued use of the Application following any modifications constitutes your acceptance of the revised Agreement.</p>
+        </section>
 
         <footer>
             <p>&copy; 2026 Stopify. All rights reserved.</p>
-            <p style="margin-top: 10px; font-size: 0.9em;">For any questions or concerns, please contact us at <a
-                    href="mailto:jainronak663@gmail.com">jainronak663@gmail.com</a>.</p>
+            <p style="margin-top: 10px; opacity: 0.7;">For any questions or concerns, please contact us at <a href="mailto:jainronak663@gmail.com">jainronak663@gmail.com</a>.</p>
         </footer>
     </div>
 </body>
